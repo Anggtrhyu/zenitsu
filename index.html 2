@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zenitsu Tribute — Halaman Fan</title>
+  <meta name="description" content="Halaman tribute untuk Zenitsu Agatsuma (Demon Slayer) — profil, kemampuan, kutipan, dan galeri." />
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --panel:#0f1724;
+      --muted:#c7cdd6;
+      --accent:#f6c84c; /* kuning */
+      --accent2:#f59e0b;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1000px;
+      --ff: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:28px;display:flex;justify-content:center;background:linear-gradient(180deg,#050508 0%, #0b0b0c 60%);color:var(--muted);font-family:var(--ff);
+    }
+    .wrap{width:100%;max-width:var(--maxw);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+    header{display:flex;align-items:center;gap:14px}
+    .badge{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#1b1b1b;font-size:28px;box-shadow:0 8px 24px rgba(245,158,11,0.15)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0 0;color:#e9eef6}
+
+    main{display:grid;grid-template-columns:1fr 330px;gap:18px;margin-top:16px}
+
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:18px;border-radius:12px}
+    .hero-top{display:flex;gap:14px;align-items:center}
+    .portrait{width:140px;height:140px;border-radius:12px;background:linear-gradient(180deg,#fff6df, #ffd98a);display:grid;place-items:center;font-size:72px;color:#1b1b1b;box-shadow:0 8px 28px rgba(245,158,11,0.12);position:relative;overflow:hidden}
+
+    /* subtle lightning */
+    .flash{position:absolute;inset:0;pointer-events:none}
+    .bolt{position:absolute;left:40%;top:-20%;width:8px;height:160%;background:linear-gradient(180deg,#fff 0%, rgba(255,255,255,0) 70%);transform:skewX(-10deg);filter:blur(6px);opacity:0.07;animation:glow 2.8s linear infinite}
+    .bolt.b2{left:60%;animation-delay:0.9s;opacity:0.06}
+    @keyframes glow{0%{opacity:0.02}40%{opacity:0.18}60%{opacity:0.06}100%{opacity:0.02}}
+
+    .meta{flex:1}
+    .meta h2{margin:0 0 6px 0}
+    .meta .role{font-size:13px;color:#ffd77a;margin-bottom:6px}
+    .meta .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:6px 8px;border-radius:8px;font-size:13px}
+
+    .bio{margin-top:12px;color:var(--muted);line-height:1.45}
+
+    /* abilities */
+    .abilities{display:flex;gap:8px;margin-top:12px}
+    .ability{flex:1;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:10px;border-radius:10px}
+    .ability h4{margin:0 0 6px 0}
+
+    /* sidebar */
+    aside .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:14px;border-radius:12px}
+    .quote{font-style:italic;color:#fff7df;padding:10px;border-radius:8px;background:linear-gradient(90deg, rgba(246,200,76,0.08), rgba(245,158,11,0.04));}
+
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+    .thumb{height:80px;border-radius:8px;background:linear-gradient(135deg,#fff6df,#ffd98a);display:grid;place-items:center;color:#1b1b1b;font-weight:700}
+
+    footer{margin-top:14px;display:flex;justify-content:space-between;align-items:center}
+    .small{font-size:13px;color:#bfc9d6}
+
+    /* responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr} .portrait{width:110px;height:110px}}
+
+    /* fun: thunder flash on click */
+    .thunder{position:fixed;inset:0;pointer-events:none;z-index:50}
+    .thunder.active{animation:thunderflash .25s linear}
+    @keyframes thunderflash{0%{background:rgba(255,255,255,0.0)}40%{background:rgba(255,255,255,0.22)}100%{background:rgba(255,255,255,0.0)}}
+
+    button.cta{background:linear-gradient(90deg,var(--accent),var(--accent2));border:0;padding:8px 12px;border-radius:8px;color:#1b1b1b;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">Z</div>
+      <div>
+        <h1>Zenitsu Agatsuma — Tribute</h1>
+        <p class="lead">Prajurit Pernafasan Petir (Thunder Breathing) • Fanpage sederhana</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-card">
+        <div class="hero-top">
+          <div class="portrait" aria-hidden="true">
+            ⚡
+            <div class="flash"><div class="bolt"></div><div class="bolt b2"></div></div>
+          </div>
+          <div class="meta">
+            <h2>Zenitsu Agatsuma</h2>
+            <div class="role">Demon Slayer Corps — Thunder Breathing</div>
+            <div class="tags">
+              <div class="tag">Kuat tapi gugup</div>
+              <div class="tag">Kilatan petir</div>
+              <div class="tag">Setia pada teman</div>
+            </div>
+            <div style="margin-top:10px">
+              <button class="cta" id="zapBtn">Aktifkan Kilat</button>
+              <button class="cta" id="sleepBtn" style="margin-left:8px">Mode Tidur</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="bio">Zenitsu dikenal karena kemampuannya yang menakutkan saat tidur — dalam kondisi tidak sadar ia mampu melepaskan teknik "Thunder Breathing" dengan presisi luar biasa. Di balik sifatnya yang penakut, ia memiliki hati yang besar dan keberanian ketika teman-temannya dalam bahaya.</p>
+
+        <div class="abilities">
+          <div class="ability">
+            <h4>Thunder Breathing</h4>
+            <p class="small">Serangkaian teknik cepat yang meniru kilat — sangat mematikan di satu serangan cepat.</p>
+          </div>
+          <div class="ability">
+            <h4>Refleks Cepat</h4>
+            <p class="small">Meskipun terlihat kikuk, di medan tempur Zenitsu bereaksi dengan refleks tingkat tinggi ketika tak sadar.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <h3>Statistik (fan-made)</h3>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <div style="flex:1;background:var(--glass);padding:10px;border-radius:8px;text-align:center">
+              <div style="font-weight:700;font-size:18px">90</div>
+              <div class="small">Kecepatan</div>
+            </div>
+            <div style="flex:1;background:var(--glass);padding:10px;border-radius:8px;text-align:center">
+              <div style="font-weight:700;font-size:18px">78</div>
+              <div class="small">Kekuatan</div>
+            </div>
+            <div style="flex:1;background:var(--glass);padding:10px;border-radius:8px;text-align:center">
+              <div style="font-weight:700;font-size:18px">85</div>
+              <div class="small">Teknik</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Kutipan Favorit</h3>
+          <p class="quote">"Jika aku tidak bisa melindungimu, maka aku tidak pantas disebut teman."</p>
+
+          <h4 style="margin-top:12px">Galeri</h4>
+          <div class="gallery">
+            <div class="thumb">1</div>
+            <div class="thumb">2</div>
+            <div class="thumb">3</div>
+            <div class="thumb">4</div>
+          </div>
+
+          <h4 style="margin-top:12px">Info Singkat</h4>
+          <ul style="padding-left:18px" class="small">
+            <li>Asal: Jepang (fan-fiction friendly)</li>
+            <li>Senjata: Nichirin Blade</li>
+            <li>Pernafasan: Thunder (Petir)</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:10px" class="card">
+          <h4>Interaksi</h4>
+          <p class="small">Klik "Aktifkan Kilat" untuk efek layar kilat. "Mode Tidur" menampilkan teks lucu.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="small">Halaman fan sederhana • Tidak resmi • Untuk penggunaan pribadi</div>
+      <div class="small">Butuh versi bahasa Inggris atau ingin menambahkan gambar? Beri tahu aku.</div>
+    </footer>
+  </div>
+
+  <div class="thunder" id="thunder"></div>
+
+  <script>
+    const thunder = document.getElementById('thunder');
+    document.getElementById('zapBtn').addEventListener('click', ()=>{
+      thunder
